@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="HomePageDup(failed)">
+    <parameter name="browser" value="firefox"/>
+    <parameter name="platform" value="macOS 10.15"/>
+    <classes>
+      <class name="Tests.SauceExecTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verifyHomePageTestDup" invocation-numbers="0"/>
+          <include name="verifyHomePageTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Tests.SauceExecTest -->
+    </classes>
+  </test> <!-- HomePageDup(failed) -->
+  <test thread-count="5" parallel="tests" name="HomePage(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="platform" value="windows 11"/>
+    <classes>
+      <class name="Tests.SauceExecTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verifyHomePageTestDup" invocation-numbers="0"/>
+          <include name="verifyHomePageTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Tests.SauceExecTest -->
+    </classes>
+  </test> <!-- HomePage(failed) -->
+</suite> <!-- Failed suite [Suite] -->
